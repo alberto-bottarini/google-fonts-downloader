@@ -1,6 +1,6 @@
 {
   "name": "google-fonts-downloader",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Google Web Fonts downloader",
   "main": "./bin/gfdownloader",
   "scripts": {
