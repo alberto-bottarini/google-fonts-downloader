@@ -1,0 +1,29 @@
+{
+  "name": "google-fonts-downloader",
+  "version": "0.0.0",
+  "description": "Google Web Fonts downloader",
+  "main": "gfdownloader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alberto-bottarini/google-fonts-downloader.git"
+  },
+  "keywords": [
+    "google",
+    "web",
+    "fonts",
+    "downloader",
+    "node"
+  ],
+  "author": "Alberto Bottarini <alberto.bottarini@gmail.com>",
+  "license": "Mozilla Public License, version 2.0",
+  "bugs": {
+    "url": "https://github.com/alberto-bottarini/google-fonts-downloader/issues"
+  },
+  "dependencies": {
+    "request": "~2.34.0",
+    "lodash": "~2.4.1"
+  }
+}
