@@ -5,6 +5,8 @@ var fs = require('fs');
 var _ = require('lodash');
 	
 var fontsCode = process.argv[2]; //Ubuntu:400,300
+var dstPath = process.argv[3] || "./";
+if (dstPath[dstPath.length - 1] !== "/")  dstPath += "/";
 var t = fontsCode.split(':');
 var fontName = t[0];
 var fontVersions = t[1].split(',');
@@ -61,7 +63,7 @@ var downloadedFonts = [];
 				requestFont();
 	    	} else {
 		    	var filename = fontName.toLowerCase() + "-" + fontVersions[currentFont] + "." + data.extension;
-				var r = request(fontUrls[currentFont]).pipe(fs.createWriteStream(filename));
+				var r = request(fontUrls[currentFont]).pipe(fs.createWriteStream(dstPath + filename));
 				r.on('close', function() {
 					//console.log("File : " + filename + " created with success!");
 					downloadedFonts.push(fontUrls[currentFont]);
