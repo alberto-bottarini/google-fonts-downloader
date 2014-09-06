@@ -20,3 +20,6 @@ gfdownloader Titillium+Web:400,400italic,300italic,300,200italic
 ```js
 gfdownloader Allura:400
 ```
+```js
+gfdownloader Lobster:400:latin,cyrillic
+```

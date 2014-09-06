@@ -10,9 +10,11 @@ if (dstPath[dstPath.length - 1] !== "/")  dstPath += "/";
 var t = fontsCode.split(':');
 var fontName = t[0];
 var fontVersions = t[1].split(',');
+var fontSubset = t[2];
 
+var googleFontsUrl = "http://fonts.googleapis.com/css?family=" + t[0] + ":" + t[1];
+if (fontSubset != null) { googleFontsUrl += "&subset=" + fontSubset; }
 
-var googleFontsUrl = "http://fonts.googleapis.com/css?family=" + fontsCode;
 var fontRegExp = /url\(([^\)]+)\)/gm;
 
 var userAgentMap = [{
